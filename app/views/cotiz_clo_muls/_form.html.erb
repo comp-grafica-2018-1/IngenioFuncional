@@ -1,0 +1,62 @@
+<%= form_with(model: cotiz_clo_mul, local: true) do |form| %>
+  <% if cotiz_clo_mul.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cotiz_clo_mul.errors.count, "error") %> prohibited this cotiz_clo_mul from being saved:</h2>
+
+      <ul>
+      <% cotiz_clo_mul.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="controls">
+    <%= form.label :alturaCloMul %>
+    <%= form.select(:alturaCloMul, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10']]), {include_blank: true}) %>
+  </div>
+
+  <div class="controls">
+    <%= form.label :anchuraCloMul %>
+    <%= form.select(:anchuraCloMul, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10']]), {include_blank: true}) %>
+  </div>
+
+  <div class="controls">
+    <%= form.label :colorCloMul %>
+    <%= form.select(:colorCloMul, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10']]), {include_blank: true}) %>
+  </div>
+
+  <div class="controls">
+    <%= form.label :materialCloMul %>
+    <%= form.select(:materialCloMul, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10']]), {include_blank: true}) %>
+  </div>
+
+  <div class="controls">
+    <%= form.label :tipManijasCloMul %>
+    <%= form.select(:tipManijasCloMul, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10']]), {include_blank: true}) %>
+  </div>
+
+  <div class="controls">
+    <%= form.label :numRepisasCloMul %>
+    <%= form.select(:numRepisasCloMul, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5']]), {include_blank: true}) %>
+  </div>
+
+  <div class="controls">
+    <%= form.label :cantidad %>
+    <%= form.select(:cantidad, options_for_select([['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10']]), {include_blank: true}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :correo %>
+    <%= form.text_field :correo, id: :cotiz_clo_mul_correo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :cotiz_clo_mul_nombre %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

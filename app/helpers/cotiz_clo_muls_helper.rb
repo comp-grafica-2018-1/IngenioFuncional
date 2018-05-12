@@ -1,0 +1,2 @@
+module CotizCloMulsHelper
+end

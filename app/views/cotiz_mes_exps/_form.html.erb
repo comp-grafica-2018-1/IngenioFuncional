@@ -1,0 +1,27 @@
+<%= form_with(model: cotiz_mes_exp, local: true) do |form| %>
+  <% if cotiz_mes_exp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cotiz_mes_exp.errors.count, "error") %> prohibited this cotiz_mes_exp from being saved:</h2>
+
+      <ul>
+      <% cotiz_mes_exp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :correo %>
+    <%= form.text_field :correo, id: :cotiz_mes_exp_correo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :cotiz_mes_exp_nombre %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

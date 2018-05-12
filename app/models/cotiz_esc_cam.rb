@@ -1,0 +1,2 @@
+class CotizEscCam < ApplicationRecord
+end

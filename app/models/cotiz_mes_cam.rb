@@ -1,0 +1,2 @@
+class CotizMesCam < ApplicationRecord
+end

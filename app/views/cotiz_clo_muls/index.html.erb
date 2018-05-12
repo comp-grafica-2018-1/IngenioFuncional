@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cotiz Clo Muls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha y Hora de Cotización</th>
+      <th>Altura</th>
+      <th>Anchura</th>
+      <th>Color</th>
+      <th>Material</th>
+      <th>Tipo de Manijas</th>
+      <th>Número de Repisas</th>
+      <th>Cantidad Solicitada</th>
+      <th>Correo Electrónico de Contacto</th>
+      <th>Nombre de Contacto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cotiz_clo_muls.each do |cotiz_clo_mul| %>
+      <tr>
+        <td><%= cotiz_clo_mul.created_at %></td>
+        <td><%= cotiz_clo_mul.alturaCloMul %></td>
+        <td><%= cotiz_clo_mul.anchuraCloMul %></td>
+        <td><%= cotiz_clo_mul.colorCloMul %></td>
+        <td><%= cotiz_clo_mul.materialCloMul %></td>
+        <td><%= cotiz_clo_mul.tipManijasCloMul %></td>
+        <td><%= cotiz_clo_mul.numRepisasCloMul %></td>
+        <td><%= cotiz_clo_mul.cantidad %></td>
+        <td><%= cotiz_clo_mul.correo %></td>
+        <td><%= cotiz_clo_mul.nombre %></td>
+        <td><%= link_to 'Show', cotiz_clo_mul %></td>
+        <td><%= link_to 'Edit', edit_cotiz_clo_mul_path(cotiz_clo_mul) %></td>
+        <td><%= link_to 'Destroy', cotiz_clo_mul, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cotiz Clo Mul', new_cotiz_clo_mul_path %>

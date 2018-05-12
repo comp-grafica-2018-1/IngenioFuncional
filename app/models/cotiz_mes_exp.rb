@@ -1,0 +1,2 @@
+class CotizMesExp < ApplicationRecord
+end
